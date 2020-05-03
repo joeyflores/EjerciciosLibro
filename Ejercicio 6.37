@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+
+int fibonacci(int numero){
+    int x=0,y=1,z=0;
+    for(int i=1;i<numero;i++){
+        z=x+y;
+        x=y;
+        y=z;
+    }
+    return z;
+}
+
+int main()
+{
+    int n1;
+    cout<<"Ingrese el numero para calcular fibonacci: ";cin>>n1;
+    cout<<"El fibonacci de ("<<n1<<") es = "<<fibonacci(n1)<<endl;
+    return 0;
+}
