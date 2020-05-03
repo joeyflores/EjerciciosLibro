@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int numInvertido(int numero){
+    int conta;
+    int num=0;
+    while(numero!=0){
+        conta=numero%10;
+        num=num*10+conta;
+        numero=numero/10;
+
+    }
+    return num;
+
+}
+int main()
+{
+    int n1;
+    cout<<"Ingrese el numero que sera escrito al reves: ";cin>>n1;
+    cout<<numInvertido(n1);
+    return 0;
+}
