@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int mcd(int x,int y){
+    if(y==0){
+        return x;
+    }
+    else{
+        return mcd(y,x%y);
+    }
+}
+int main()
+{
+    int a,b;
+    cout<<"Ingrese su primer numero: ";cin>>a;
+    cout<<"Ingrese su segundo numero: ";cin>>b;
+
+    if(a>b){
+        cout<<"mcd de (a,b) = "<<mcd(a,b)<<endl;
+    }
+    else if(b>a){
+        while(b>a){
+        cout<<"\n";
+        cout<<"Su numero debe ser menor que el primero"<<endl;
+        cout<<"Vuelva a ingresar su segundo numero: ";cin>>b;
+            if(a>b){
+                cout<<"mcd de (a,b) = "<<mcd(a,b)<<endl;
+            }
+        }
+    }
+    return 0;
+}
