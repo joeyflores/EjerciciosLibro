@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double cantidad;
+	double principal = 24.0;
+	double tasa = 0.05;
+
+	cout << "Anio" << setw( 24 ) << "Cantidad  Depositada" << endl;
+
+	cout << fixed << setprecision( 2 );
+	for(tasa=0.05;tasa<=0.1;tasa+=0.01)
+	{
+		for(int anio=1;anio<=390;++anio)
+		{
+			cantidad=principal*pow(1.0+tasa,anio);
+
+			cout << setw( 4 ) << anio << setw( 24 ) << cantidad << endl;
+		}
+		cout << endl;
+	}
+
+    return 0;
+}
