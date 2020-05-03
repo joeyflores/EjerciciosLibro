@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n1;
+    int x,y=0,z;
+    cout<<"Ingrese su numero: ";cin>>n1;//121
+    z=n1;
+
+    while(n1!=0){
+        x=n1%10;            
+        y=(y*10)+x;         
+        n1=n1/10;           
+    }
+    if(y==z){
+        cout<<"si es palindrome"<<endl;
+    }
+    else{
+        cout<<"no es palindrome"<<endl;
+    }
+    return 0;
+}
