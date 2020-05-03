@@ -1,0 +1,64 @@
+#include <iostream>
+
+using namespace std;
+
+/*
+PARTE a):
+
+int esPrimo(int primo){
+    int conta=0;
+    for(int i=1;i<=primo;i++){
+        if(primo%i==0){
+            conta=conta+1;
+        }
+    }
+    if(conta<=2){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+int main()
+{
+    int numero;
+    cout <<"Ingrese un numero: ";cin>>numero;
+    if(esPrimo(numero)==true){
+        cout<<"Si es primo"<<endl;
+    }
+    else{
+        cout<<"No es primo"<<endl;
+    }
+
+
+    return 0;
+}
+*/
+
+//PARTE b):
+
+int esPrimo(int primo){
+    int conta=0;
+    for(int i=1;i<=primo;i++){
+        if(primo%i==0){
+            conta=conta+1;
+
+        }
+    }
+    if(conta<=2){
+        return primo;
+    }
+
+}
+
+int main()
+{
+    for(int i=2;i<=10000;i++){
+        if(i==esPrimo(i)){
+            cout<<i<<endl;
+        }
+    }
+    return 0;
+}
+
