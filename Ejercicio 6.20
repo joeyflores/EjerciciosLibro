@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+
+int esFactor(int a,int b){
+
+    if(a%b==0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+int main()
+{
+    int x,y;
+    cout<<"Ingrese su primer numero: ";cin>>x;
+    cout<<"Ingrese su segundo numero: ";cin>>y;
+
+    if(esFactor(x,y)==true){
+        cout<<"Es verdadero porque "<<y<<" es un factor de "<<x<<endl;
+    }
+    else{
+        cout<<"Es falso porque "<<y<<" no es un factor de "<<x<<endl;
+    }
+
+    return 0;
+}
